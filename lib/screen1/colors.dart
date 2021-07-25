@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 const black= Colors.black;
-const gray= Colors.grey;
+const gray= Color(0xFF737171);
 const white = Colors.white;
 const pink =Color(0xFFFA5865);
+const pink2 =Color(0xFFFFBEC3);
 const pinkclear =Color(0xFFF7AAB0);
 const green =Color(0xFFBCF7BD);
 const red = Color(0xFFFD0100);

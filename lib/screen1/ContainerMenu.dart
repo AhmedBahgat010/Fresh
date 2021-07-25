@@ -42,7 +42,7 @@ final Color coloricon;
             BoxShadow(
               color: Colors.grey.withOpacity(0.5),
               spreadRadius: 2,
-              blurRadius: 4,
+              blurRadius: 9,
             ),
           ],
           borderRadius: BorderRadius.circular(20),

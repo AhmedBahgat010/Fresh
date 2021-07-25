@@ -1,14 +1,20 @@
 import 'package:flutter/material.dart';
+
 import 'package:sdvapp/screen2/orders.dart';
 import 'package:sdvapp/screen1/colors.dart';
+
 class ContainerImageMenu extends StatefulWidget {
-  ContainerImageMenu({@required this.colorcontainer,this.imagecontainer, this.title1, this.title2, this.title3});
+  ContainerImageMenu({@required this.colorcontainer,
+    this.imagecontainer,
+    this.title1,
+    this.title2,
+    this.title3});
 
   final String title1;
   final String title2;
   final String title3;
-final Color colorcontainer;
-final String imagecontainer;
+  final Color colorcontainer;
+  final String imagecontainer;
 
   @override
   _ContainerImageMenuState createState() => _ContainerImageMenuState();
@@ -18,8 +24,10 @@ class _ContainerImageMenuState extends State<ContainerImageMenu> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: (){
-        Navigator.push(context, MaterialPageRoute(builder: (context) => Orders()));
+      onTap: () {
+        Navigator.push(
+          context, MaterialPageRoute(
+          builder: (context) => Orders(imagePrice2: widget.imagecontainer,colorPrice:widget.colorcontainer),),);
       },
       child: Container(
         height: 100,
@@ -45,10 +53,9 @@ class _ContainerImageMenuState extends State<ContainerImageMenu> {
             ),
             SizedBox(width: 20),
             Column(
-        //      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              //      mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-
                 Text(
                   widget.title1,
                   style: TextStyle(
@@ -58,22 +65,22 @@ class _ContainerImageMenuState extends State<ContainerImageMenu> {
                   ),
                 ),
                 SizedBox(
-                  height:9,
+                  height: 9,
                 ),
                 Text(
                   widget.title2,
                   style: TextStyle(
-                    color:gray,
+                    color: gray,
                     fontSize: 18,
                   ),
                 ),
-SizedBox(
-  height: 9,
-),
+                SizedBox(
+                  height: 9,
+                ),
                 Text(
                   widget.title3,
                   style: TextStyle(
-                    color:pink,
+                    color: pink,
                     fontWeight: FontWeight.bold,
                     fontSize: 22,
                   ),
