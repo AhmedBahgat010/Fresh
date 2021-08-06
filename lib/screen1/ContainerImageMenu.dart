@@ -27,7 +27,7 @@ class _ContainerImageMenuState extends State<ContainerImageMenu> {
       onTap: () {
         Navigator.push(
           context, MaterialPageRoute(
-          builder: (context) => Orders(imagePrice2: widget.imagecontainer,colorPrice:widget.colorcontainer),),);
+          builder: (context) => Orders(imagePrice: widget.imagecontainer,colorPrice:widget.colorcontainer,title1:widget.title1,title2: widget.title3,),),);
       },
       child: Container(
         height: 100,

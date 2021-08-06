@@ -1,12 +1,13 @@
 import 'package:flutter/cupertino.dart';
-import 'package:sdvapp/screen2/containerprice.dart';
+
+import 'package:sdvapp/screen3/shopping_cart.dart';
 import 'Listmenu.dart';
 import 'ContainerMenu.dart';
 
 import 'package:flutter/material.dart';
 
 import 'ContainerImageMenu.dart';
-import 'apoahmed.dart';
+import 'cuperino.dart';
 import 'colors.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -24,21 +25,33 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         actions: [
           FlatButton(
-              onPressed: () {}, child: Icon(Icons.shopping_cart_outlined))
+              onPressed: () {
+                // Navigator.push(
+                //   context,
+                //   MaterialPageRoute(
+                //     builder: (context) => Cart(s1: null,s2: null,
+                //       ),
+                //   ),
+                // );
+              },
+              child: Icon(Icons.shopping_cart_outlined))
         ],
         backgroundColor: Colors.white,
         title: Text("Fresh",
             style: TextStyle(
               color: Colors.black,
-              fontSize: 25,
+              fontSize: 28,
               fontWeight: FontWeight.bold,
             )),
         elevation: 0,
       ),
       body: ListView(
         children: [
-          cupertino(),
-          Row(
+          Padding(
+            padding: const EdgeInsets.only(top: 10),
+            child: cupertino(),
+          ),
+          Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               GestureDetector(
                 onTap: () {
@@ -112,10 +125,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   title3: menu[pageIndex][index][4]);
             },
           ),
-
         ],
       ),
-
     );
   }
 }
